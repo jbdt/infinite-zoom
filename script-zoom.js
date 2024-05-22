@@ -6,21 +6,21 @@ document.addEventListener("DOMContentLoaded", function() {
     const numImages = 9;
     const slow = 1;
     const container = document.createElement('div');
-    container.style.display = 'none'; // Ocultamos el contenedor mientras se cargan las imágenes
-    // Agregar las imágenes al contenedor
+    container.style.display = 'none';
+
     for (let i = 0; i < numImages; i++) {
       const img = new Image();
       img.src = `img/${prefix}${i+startAt}.${extension}`;
       container.appendChild(img);
     }
-    // Una vez que todas las imágenes estén cargadas, mostramos el contenedor y comenzamos las animaciones
+
     function showContainerAndAnimate() {
-      document.body.appendChild(container); // Agregar el contenedor al DOM
+      document.body.appendChild(container);
       for (let i = 0; i < numImages; i++) {
         const element = document.createElement('div');
         element.classList.add('zoom');
         element.style.backgroundImage = `url('img/${prefix}${i+startAt}.${extension}')`;
-        document.body.appendChild(element); // Agregar el elemento al DOM
+        document.body.appendChild(element);
         switch (i) {
           case 0:
             addAnimation(element, 0, 0, "aplhaScale");
