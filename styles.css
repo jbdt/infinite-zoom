@@ -141,6 +141,31 @@ body {
     transform: scale(8);
   }
 }
+.control-button {
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+}
+.control-button:hover {
+  background-color: #0056b3;
+}
+.control-button:active {
+  background-color: #004494;
+}
 .button-back-link {
   font-family: Arial, sans-serif;
   display: inline-block;
@@ -159,11 +184,9 @@ body {
   right: 10px;
   z-index: 1000;
 }
-
 .button-back-link:hover {
   background-color: #0056b3;
 }
-
 .button-back-link:active {
   background-color: #004494;
 }
