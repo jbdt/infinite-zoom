@@ -7,6 +7,7 @@ body {
   overflow: hidden;
   position: relative;
   background-color: darkolivegreen;
+  user-select: none;
 }
 
 .zoom {
