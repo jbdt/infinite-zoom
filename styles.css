@@ -142,11 +142,26 @@ body {
     transform: scale(8);
   }
 }
+.control-button-audio{
+  top: 10px;
+  left: 10px;
+}
+.control-button-speed{
+  top: 10px;
+  left: 59px;
+}
+.control-button-x05{top: 55px;left: 10px;}
+.control-button-x1{top: 97px;left: 10px;}
+.control-button-x2{top: 139px;left: 10px;}
+.control-button-x4{top: 181px;left: 10px;}
+.control-button-x8{top: 223px;left: 10px;}
+.control-button-x16{top: 265px;left: 10px;}
+.control-button-x32{top: 307px;left: 10px;}
 .control-button {
   cursor: pointer;
   font-family: Arial, sans-serif;
   display: inline-block;
-  padding: 10px 20px;
+  padding: 10px;
   font-size: 16px;
   font-weight: bold;
   color: #fff;
@@ -157,9 +172,8 @@ body {
   text-decoration: none;
   transition: background-color 0.3s ease;
   position: fixed;
-  top: 10px;
-  left: 10px;
   z-index: 1000;
+  width: 45px;
 }
 .control-button:hover {
   background-color: #0056b3;

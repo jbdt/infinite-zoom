@@ -1,18 +1,26 @@
 document.addEventListener("DOMContentLoaded", function() {
   setTimeout(() => {
-    const prefix = "ai";
+    const urlParams = new URLSearchParams(window.location.search);
+
+    const prefix = "frames";
     const startAt = 0;
     const extension = "png";
-    const numImages = 9;
-    const slow = 1;
+    const images = 4;
+    const speed = urlParams.get('speed') || 1;
+
+    const slow = 1 / speed;
+    const numImages = images + 2;
     const container = document.createElement('div');
     container.style.display = 'none';
 
-    for (let i = 0; i < numImages; i++) {
+    function createImages(i) {
       const img = new Image();
       img.src = `img/${prefix}${i+startAt}.${extension}`;
       container.appendChild(img);
     }
+    
+    for (let i = 0; i < numImages; i++) {createImages(i);}
+    for (let i = 0; i < 2; i++) {createImages(i);}
 
     function showContainerAndAnimate() {
       document.body.appendChild(container);
@@ -45,6 +53,6 @@ document.addEventListener("DOMContentLoaded", function() {
         zoomDiv.parentNode.removeChild(zoomDiv);
       }
       showContainerAndAnimate();
-    }, (numImages * 4 * slow) * 1000);
+    }, ((numImages - 2) * 4 * slow) * 1000);
   }, "100");
 });

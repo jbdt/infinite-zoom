@@ -8,13 +8,23 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <audio id="background-audio" loop>
+    <audio id="control-audio" loop>
       <source src="falling.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
-    <button class="control-button" onclick="toggleAudio()">🔊</button>
+    <button class="control-button control-button-audio" onclick="toggleAudio()">🔊</button>
+    <button class="control-button control-button-speed" onclick="toggleSpeed()">🏃🏻‍♀️</button>
+    <div id="control-speed" style="display: none;">
+      <a class="control-button control-button-x05" href="?speed=0.5">x0.5</a>
+      <a class="control-button control-button-x1" href="?speed=1">x1</a>
+      <a class="control-button control-button-x2" href="?speed=2">x2</a>
+      <a class="control-button control-button-x4" href="?speed=4">x4</a>
+      <a class="control-button control-button-x8" href="?speed=8">x8</a>
+      <a class="control-button control-button-x16" href="?speed=16">x16</a>
+      <a class="control-button control-button-x32" href="?speed=32">x32</a>
+    </div>
     <a href="https://xn--ldaa.com" class="button-back-link">Back ôô</a>
     <script src="script-zoom.js"></script>
-    <script src="script-audio.js"></script>
+    <script src="script-control.js"></script>
   </body>
 </html>
