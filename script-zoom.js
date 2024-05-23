@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
       container.appendChild(img);
     }
     
-    for (let i = 0; i < numImages; i++) {createImages(i);}
+    for (let i = 0; i < images; i++) {createImages(i);}
     for (let i = 0; i < 2; i++) {createImages(i);}
 
     function showContainerAndAnimate() {
@@ -27,7 +27,8 @@ document.addEventListener("DOMContentLoaded", function() {
       for (let i = 0; i < numImages; i++) {
         const element = document.createElement('div');
         element.classList.add('zoom');
-        element.style.backgroundImage = `url('img/${prefix}${i+startAt}.${extension}')`;
+        imgNumber = i + 2 < numImages ? i + startAt : i - numImages + 2;
+        element.style.backgroundImage = `url('img/${prefix}${imgNumber}.${extension}')`;
         document.body.appendChild(element);
         switch (i) {
           case 0:
