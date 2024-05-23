@@ -30,22 +30,13 @@ document.addEventListener("DOMContentLoaded", function() {
         imgNumber = i + 2 < numImages ? i + startAt : i - numImages + 2;
         element.style.backgroundImage = `url('img/${prefix}${imgNumber}.${extension}')`;
         document.body.appendChild(element);
-        switch (i) {
-          case 0:
-            addAnimation(element, 0, 0, "aplhaScale");
-            break;
-          case 1:
-            addAnimation(element, 0, 0, "betaScale");
-            break;
-          default:
-            addAnimation(element, slow * 4 * (i - 2), slow * 4 * (i - 2), "finalScale");
-        }
+        addAnimation(element, slow * 4 * (i - 2), slow * 4 * (i - 2), "finalScale");
       }
     }
     showContainerAndAnimate();
 
     function addAnimation(element, delayHidden, delayFinalScale, animationScale) {
-      element.style.animation = `stayHidden ${delayHidden}s, ${animationScale} ${slow * 16}s ${delayFinalScale}s linear `;
+      element.style.animation = `stayHidden ${delayHidden}s, ${animationScale} ${slow * 16}s ${delayFinalScale}s cubic-bezier(0.66, 0.5, 0.5, 0.33)`;
     }
     setInterval(() => {
       var zoomDivs = document.querySelectorAll('div.zoom');
