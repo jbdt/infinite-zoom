@@ -27,9 +27,9 @@ body {
 }
 
 @keyframes finalScale {
-  0% {transform: scale(0.5);}
+  0% {transform: scale(0.5);opacity: 0;}
   25% {transform: scale(1);}
-  50% {transform: scale(2);}
+  50% {transform: scale(2);opacity: 1;}
   75% {transform: scale(4);}
   100% {transform: scale(8);}
 }
