@@ -7,14 +7,13 @@
     <title>🌀 Infinity Zoom</title>
     <link rel="shortcut icon" href="https://xn--ldaa.com/img/favicon.png" />
     <meta property="og:title" content="🌀 Infinity Zoom">
-    <meta property="og:description" content="This gentleman is really tall, no one knows exactly how tall. I invite you to check it out.">
-    <meta property="og:image" content="https://xn--ldaa.com/img/infinity-zoom.png">
+    <meta property="og:description" content="Demonstration of a zoom loop made only with css and js. Maybe someday I'll make it super long."><meta property="og:image" content="https://xn--ldaa.com/img/infinity-zoom.png">
     <meta property="og:url" content="https://infinity-zoom.xn--ldaa.com/">
     <meta name="twitter:card" content="https://xn--ldaa.com/img/infinity-zoom.png">
     <meta name="twitter:title" content="🌀 Infinity Zoom">
-    <meta name="twitter:description" content="This gentleman is really tall, no one knows exactly how tall. I invite you to check it out.">
-    <meta name="twitter:image" content="https://infinity-zoom.xn--ldaa.com/">
+    <meta name="twitter:description" content="Demonstration of a zoom loop made only with css and js. Maybe someday I'll make it super long."><meta name="twitter:image" content="https://infinity-zoom.xn--ldaa.com/">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="loader.css">
   </head>
   <body>
     <audio id="control-audio" loop>
@@ -23,6 +22,10 @@
     </audio>
     <button class="control-button control-button-audio" onclick="toggleAudio()">🔊</button>
     <button class="control-button control-button-speed" onclick="toggleSpeed()">🏃🏻‍♀️</button>
+    <div class="loader-wrapper" id="loader">
+      <div class="loader"></div>
+    </div>
+    <div class="frame"></div>
     <div id="control-speed" style="display: none;">
       <a class="control-button control-button-x05" href="?speed=0.5">x0.5</a>
       <a class="control-button control-button-x1" href="?speed=1">x1</a>
@@ -33,6 +36,7 @@
       <a class="control-button control-button-x32" href="?speed=32">x32</a>
     </div>
     <a href="https://xn--ldaa.com" class="button-back-link">Back ôô</a>
+    <script src="loader.js"></script>
     <script src="script-zoom.js"></script>
     <script src="script-control.js"></script>
   </body>

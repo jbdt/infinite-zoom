@@ -20,40 +20,30 @@ body {
 }
 
 @keyframes stayHidden {
-  0% {
-    transform: scale(0);
-  }
-
-  100% {
-    transform: scale(0);
-  }
+  0% {z-index: 1;}
+  25% {z-index: 900;}
+  75% {z-index: 1;}
+  100% {z-index: 1;}
 }
 
 @keyframes finalScale {
-  0% {
-    transform: scale(0.5);
-  }
-
-
-  25% {
-    transform: scale(1);
-  }
-
-
-  50% {
-    transform: scale(2);
-  }
-
-
-  75% {
-    transform: scale(4);
-  }
-
-
-  100% {
-    transform: scale(8);
-  }
+  0% {transform: scale(0.5);}
+  25% {transform: scale(1);}
+  50% {transform: scale(2);}
+  75% {transform: scale(4);}
+  100% {transform: scale(8);}
 }
+.frame{
+  background-image: url('img/frame.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 1600%;
+  height: 1600%;
+  position: fixed;
+  z-index: 998;
+}
+
 .control-button-audio{
   top: 10px;
   left: 10px;
